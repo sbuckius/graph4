@@ -9,7 +9,7 @@ let totalResponses = 0;
 
 function preload() {
   for (let i = 1; i <= 5; i++) {
-    images.push(loadImage('images/weft' + i + '.png'));
+    images.push(loadImage('images/weft' + i + '.jpg'));
   }
 }
 
