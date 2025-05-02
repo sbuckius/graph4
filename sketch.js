@@ -52,15 +52,15 @@ function setup() {
     redraw();
   });
 
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT.firebaseio.com",
-    projectId: "YOUR_PROJECT",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "SENDER_ID",
-    appId: "APP_ID"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyA9n5ehDW0CGvro2ZMzUnziups4TvaN-bg",
+  authDomain: "test-interactive-ed653.firebaseapp.com",
+  databaseURL: "https://test-interactive-ed653-default-rtdb.firebaseio.com",
+  projectId: "test-interactive-ed653",
+  storageBucket: "test-interactive-ed653.firebasestorage.app",
+  messagingSenderId: "500612866261",
+  appId: "1:500612866261:web:f4ebf70e03e7989b1bc25c"
+};
 
   firebase.initializeApp(firebaseConfig);
   database = firebase.database();
