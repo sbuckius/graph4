@@ -1,0 +1,1 @@
+# The full sketch.js content with 100-response reset logic goes here.
