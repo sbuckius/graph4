@@ -53,13 +53,12 @@ function setup() {
   });
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9n5ehDW0CGvro2ZMzUnziups4TvaN-bg",
-  authDomain: "test-interactive-ed653.firebaseapp.com",
-  databaseURL: "https://test-interactive-ed653-default-rtdb.firebaseio.com",
-  projectId: "test-interactive-ed653",
-  storageBucket: "test-interactive-ed653.firebasestorage.app",
-  messagingSenderId: "500612866261",
-  appId: "1:500612866261:web:f4ebf70e03e7989b1bc25c"
+  apiKey: "AIzaSyCSAOhgQ9wn4Yw1p1B4Qohx19fDIy_MV44",
+  authDomain: "graph2-9ef9c.firebaseapp.com",
+  projectId: "graph2-9ef9c",
+  storageBucket: "graph2-9ef9c.firebasestorage.app",
+  messagingSenderId: "1038101689471",
+  appId: "1:1038101689471:web:7f64c54a4d1d1e5ff33b4a"
 };
 
   firebase.initializeApp(firebaseConfig);
