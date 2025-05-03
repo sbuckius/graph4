@@ -138,7 +138,7 @@ function drawJacquardPattern() {
   fill(0);
   textSize(16);
   text("Jacquard Textile Pattern", 20, 30);
-  let tileSize = 80;
+  let tileSize = 20;
 
   for (let y = 40; y < height; y += tileSize) {
     for (let x = 0; x < width; x += tileSize) {
