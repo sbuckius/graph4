@@ -108,7 +108,7 @@ function draw() {
 function drawBarGraph() {
   fill(0);
   textSize(16);
-  text("Bar Graph of Responses", 20, 60);
+  text("Does AI help you?", 300, 60);
   let barWidth = width / max(responseList.length, 1);
   let maxCount = max(Object.values(responses));
 
