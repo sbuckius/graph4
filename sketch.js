@@ -8,7 +8,7 @@ let showPattern = false;
 let totalResponses = 0;
 
 function preload() {
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 10; i++) {
     images.push(loadImage('images/weft' + i + '.jpg'));
   }
 }
