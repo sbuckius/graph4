@@ -73,7 +73,7 @@ saveDataButton.mousePressed(saveDataToCSV);
 //changeStyleBtn.mousePressed(() => {
   //currentStyle = random(styles);
   //redraw();
-});
+
 
 
 const firebaseConfig = {
