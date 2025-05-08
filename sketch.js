@@ -59,11 +59,11 @@ restartButton.mousePressed(() => {
   }
 });
 
-saveDataButton = createButton('Save Data');
-saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
-saveDataButton.mousePressed(saveDataToCSV);
+//saveDataButton = createButton('Save Data');
+//saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
+//saveDataButton.mousePressed(saveDataToCSV);
 
-  }); 
+ // }); 
 
 const firebaseConfig = {
   apiKey: "AIzaSyCSAOhgQ9wn4Yw1p1B4Qohx19fDIy_MV44",
@@ -177,19 +177,19 @@ function resetGraph() {
   showPattern = false;
   redraw();
 }
-function saveDataToCSV() {
-  let rows = [["Response", "Count"]];
+//function saveDataToCSV() {
+  //let rows = [["Response", "Count"]];
 
-  for (let resp of responseList) {
-    rows.push([resp, responses[resp]]);
-  }
+  //for (let resp of responseList) {
+    //rows.push([resp, responses[resp]]);
+//  }
 
-  let csv = rows.map(row => row.join(",")).join("\n");
-  let filename = "bar_graph_data.csv";
+  //let csv = rows.map(row => row.join(",")).join("\n");
+  //let filename = "bar_graph_data.csv";
 
-  let blob = new Blob([csv], { type: 'text/csv' });
-  let a = createA(URL.createObjectURL(blob), filename);
-  a.attribute("download", filename);
-  a.hide();
-  a.elt.click();
-}
+ // let blob = new Blob([csv], { type: 'text/csv' });
+ // let a = createA(URL.createObjectURL(blob), filename);
+ // a.attribute("download", filename);
+ // a.hide();
+ // a.elt.click();
+//}
