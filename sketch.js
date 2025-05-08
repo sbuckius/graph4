@@ -63,6 +63,15 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
+let styles = ["jacquard", "plaid", "handweave"];
+let currentStyle = random(styles);
+
+  let changeStyleBtn = createButton('Change Fabric Style');
+changeStyleBtn.position(...);
+changeStyleBtn.mousePressed(() => {
+  currentStyle = random(styles);
+  redraw();
+});
 
 
 const firebaseConfig = {
@@ -146,32 +155,66 @@ function drawBarGraph() {
   }
 }
 
+function draw() {
+  background(255);
+  switch (currentStyle) {
+    case "jacquard": drawJacquardPattern(); break;
+    case "plaid": drawPlaidPattern(); break;
+    case "handweave": drawHandweavePattern(); break;
+    default: drawJacquardPattern(); break;
+  }
+}
+
+let styles = ["jacquard", "plaid", "handweave"];
+let currentStyle = random(styles);
+
 function drawJacquardPattern() {
-  background(240);
-  fill(0);
-  textSize(16);
-  text("Random Jacquard Textile Pattern", 20, 30);
-
   let tileSize = 80;
-
   for (let y = 40; y < height; y += tileSize) {
     for (let x = 0; x < width; x += tileSize) {
-      if (responseList.length === 0) continue;
-
-      let randIndex = floor(random(responseList.length));
-      let resp = responseList[randIndex];
-      let img = responseImages[resp];
-
+      let randResp = random(responseList);
+      let img = responseImages[randResp];
       if (img) {
-        // Add variation: scale and tint
-        let scale = random(0.8, 1.2);
-        tint(random(150, 255), random(150, 255), random(150, 255), 200);
-        image(img, x, y, tileSize * scale, tileSize * scale);
+        tint(random(150,255), random(150,255), random(150,255), 220);
+        image(img, x, y, tileSize, tileSize);
       }
     }
   }
   noTint();
 }
+
+function drawPlaidPattern() {
+  let stripeSize = 40;
+
+  for (let x = 0; x < width; x += stripeSize) {
+    fill(random(100, 255), random(100, 200), random(100, 255), 120);
+    rect(x, 0, stripeSize, height);
+  }
+
+  for (let y = 0; y < height; y += stripeSize) {
+    fill(random(100, 255), random(100, 200), random(100, 255), 120);
+    rect(0, y, width, stripeSize);
+  }
+}
+
+function drawHandweavePattern() {
+  let spacing = 20;
+
+  for (let x = 0; x < width; x += spacing) {
+    stroke(random(150, 200), random(100, 180), 150);
+    strokeWeight(random(2, 4));
+    line(x, 0, x, height); // warp
+  }
+
+  for (let y = 0; y < height; y += spacing) {
+    stroke(random(100, 150), 150, random(150, 200));
+    strokeWeight(random(2, 4));
+    line(0, y, width, y); // weft
+  }
+
+  noStroke();
+}
+
 
 function resetGraph() {
   database.ref("responses").remove();
