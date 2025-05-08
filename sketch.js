@@ -1,4 +1,4 @@
-let input, submitButton, saveGraphButton, savePatternButton, showGraphButton, showPatternButton, restartButton, saveDataButton, changeStyleBtn; 
+let input, submitButton, saveGraphButton, savePatternButton, showGraphButton, showPatternButton, restartButton, saveDataButton; 
 let responses = {};
 let responseList = [];
 let responseImages = {};
@@ -68,11 +68,11 @@ saveDataButton.mousePressed(saveDataToCSV);
 
   currentStyle = random(styles);
   
- changeStyleBtn = createButton('Change Fabric Style');
-changeStyleBtn.position(...);
-changeStyleBtn.mousePressed(() => {
-  currentStyle = random(styles);
-  redraw();
+ //changeStyleBtn = createButton('Change Fabric Style');
+//changeStyleBtn.position(...);
+//changeStyleBtn.mousePressed(() => {
+  //currentStyle = random(styles);
+  //redraw();
 });
 
 
