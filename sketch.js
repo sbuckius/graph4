@@ -6,6 +6,7 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
+let restartButton = createButton('Restart Graph');
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
@@ -51,6 +52,12 @@ function setup() {
     showPattern = true;
     redraw();
   });
+  restartButton.position(showPatternButton.x + showPatternButton.width + 10, 20);
+restartButton.mousePressed(() => {
+  if (confirm("Are you sure you want to reset the graph? This will delete all data.")) {
+    resetGraph();
+  }
+});
 
 const firebaseConfig = {
   apiKey: "AIzaSyCSAOhgQ9wn4Yw1p1B4Qohx19fDIy_MV44",
