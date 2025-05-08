@@ -115,7 +115,7 @@ function draw() {
 function drawBarGraph() {
   fill(0);
   textSize(10);
-  text("Does AI support you by saving you time **at home**?", 100, 60);
+  text("Does AI support you by saving you time **at home**?", 50, 50);
   let barWidth = width / max(responseList.length, 1);
   let maxCount = max(Object.values(responses));
 
