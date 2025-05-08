@@ -143,8 +143,8 @@ function drawBarGraph() {
 function drawJacquardPattern() {
   background(240);
   fill(0);
-  textSize(16);
-  text("Jacquard Textile Pattern", 20, 30);
+  //textSize(16);
+  //text("Jacquard Textile Pattern", 20, 30);
   let tileSize = 20;
 
   for (let y = 40; y < height; y += tileSize) {
