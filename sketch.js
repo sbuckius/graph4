@@ -1,4 +1,4 @@
-let input, submitButton, saveGraphButton, savePatternButton, showGraphButton, showPatternButton, restartButton, saveDataButton; 
+let input, submitButton, saveGraphButton, savePatternButton, showGraphButton, showPatternButton, restartButton, saveDataButton,  changeStyleBtn; 
 let responses = {};
 let responseList = [];
 let responseImages = {};
@@ -6,6 +6,8 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
+let styles;
+let currentStyle;
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
@@ -63,10 +65,10 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
-let styles = ["jacquard", "plaid", "handweave"];
-let currentStyle = random(styles);
+styles = ["jacquard", "plaid", "handweave"];
+currentStyle = random(styles);
 
-  let changeStyleBtn = createButton('Change Fabric Style');
+ changeStyleBtn = createButton('Change Fabric Style');
 changeStyleBtn.position(...);
 changeStyleBtn.mousePressed(() => {
   currentStyle = random(styles);
