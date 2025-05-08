@@ -149,19 +149,24 @@ function drawBarGraph() {
 function drawJacquardPattern() {
   background(240);
   fill(0);
-  //textSize(16);
-  //text("Jacquard Textile Pattern", 20, 30);
-  let tileSize = 20;
+  textSize(16);
+  text("Random Jacquard Textile Pattern", 20, 30);
+
+  let tileSize = 80;
 
   for (let y = 40; y < height; y += tileSize) {
     for (let x = 0; x < width; x += tileSize) {
-      let idx = (x / tileSize + y / tileSize) % responseList.length;
-      let resp = responseList[Math.floor(idx)];
+      if (responseList.length === 0) continue;
+
+      let randIndex = floor(random(responseList.length));
+      let resp = responseList[randIndex];
       let img = responseImages[resp];
 
       if (img) {
-        tint(200, 180);
-        image(img, x, y, tileSize, tileSize);
+        // Add variation: scale and tint
+        let scale = random(0.8, 1.2);
+        tint(random(150, 255), random(150, 255), random(150, 255), 200);
+        image(img, x, y, tileSize * scale, tileSize * scale);
       }
     }
   }
