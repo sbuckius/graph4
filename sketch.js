@@ -64,8 +64,8 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
-  let styles = ["jacquard", "plaid", "handweave"];
-let currentStyle = random(styles);
+ // let styles = ["jacquard", "plaid", "handweave"];
+//let currentStyle = random(styles);
 
  changeStyleBtn = createButton('Change Fabric Style');
 changeStyleBtn.position(...);
