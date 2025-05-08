@@ -6,8 +6,7 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
-let styles;
-let currentStyle;
+
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
@@ -65,8 +64,8 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
-styles = ["jacquard", "plaid", "handweave"];
-currentStyle = random(styles);
+  let styles = ["jacquard", "plaid", "handweave"];
+let currentStyle = random(styles);
 
  changeStyleBtn = createButton('Change Fabric Style');
 changeStyleBtn.position(...);
