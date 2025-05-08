@@ -66,6 +66,8 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
+  currentStyle = random(styles);
+  
  changeStyleBtn = createButton('Change Fabric Style');
 changeStyleBtn.position(...);
 changeStyleBtn.mousePressed(() => {
